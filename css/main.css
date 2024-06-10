@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------------
+    파일정의 : 메인 스타일
+-------------------------------------------------------------------*/
+/* 공통 */
+.main{}
+
+.main [class^='sec']{}
+.main [class^='sec'] .tit-sec{}
+
+/* 섹션 */
+.main .visual {height: 108rem; padding-top: 8.5rem; display: flex; align-items: center; justify-content: center; position: relative;}
+.main .visual p {text-align: center;}
+.main .visual .bg {position: relative; width: 93rem; height: 93rem; border-radius:100%; margin: 0 auto;}
+.main .visual .bg [class^="bg0"] {position: absolute; left: 50%; top: 50%; border-radius: 100%; opacity: 0.3;}
+.main .visual .bg [class^="bg0"]::before, 
+.main .visual .bg [class^="bg0"]::after {position: absolute; width: 100%; height: 100%; opacity: 0.3; border-radius: 100%; content: "";}
+.main .visual .bg [class^="bg0"]:before {left: -3%; top: -3%;}
+.main .visual .bg [class^="bg0"]:after {left: 3%; top: 3%;}
+.main .visual .bg .bg01 {background: #5575b5;
+	animation:
+        circle_size 1.1s ease-in-out both,
+        rotate360 4s linear infinite,
+        radius_ani 6s linear infinite;
+}
+.main .visual .bg .bg01:before {background: #5575b5; animation: radius_ani 6s .5s linear infinite;}
+.main .visual .bg .bg01:after {background: #a17eb7; animation: radius_ani 6s 1s linear infinite;}
+.main .visual .bg .bg02 {background: #69cadd;
+	animation:
+        circle_size 1.1s ease-in-out both,
+        rotate360 3.5s linear infinite,
+        radius_ani 5.5s linear infinite;
+}
+.main .visual .bg .bg02:before {background: #5575b5; animation: radius_ani 5.5s .5s linear infinite;}
+.main .visual .bg .bg02:after {background: #a17eb7; animation: radius_ani 5.5s 1s linear infinite;}
+.main .visual .bg .txt-wrap {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 64%; height: 64%; background: rgba(255,255,255,1); border-radius: 100%;}
+.main .visual .bg .txt-wrap::before, 
+.main .visual .bg .txt-wrap::after {position:absolute; left: -1%; top: -1%; width: 102%; height: 102%; background: rgba(255,255,255,0.5); border-radius: 100%; content: "";}
+.main .visual .bg .txt-wrap::before {
+	animation:
+        rotate360 4s linear infinite,
+        radius_ani 6s linear infinite;
+}
+.main .visual .bg .txt-wrap::after {
+	animation:
+        rotate360 3s linear infinite,
+        radius_ani 5s linear infinite;
+}
+.main .visual .bg .txt-wrap .inner {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 10; width: 99vw; font-size: 3rem; font-weight: 700;}
+.main .visual .bg .txt-wrap .inner .txt01 {color: #44bdd5;}
+.main .visual .bg .txt-wrap .inner .txt02 {font-size: 4.8rem; font-weight: 900;}
+.main .visual .scroll {position: absolute; left: 50%; bottom: 2rem; transform: translateX(-50%); width: 3.5rem; height: 5.5rem;}
+.main .visual .scroll .mousey {width: 2.8rem; height: 4.8rem; border: 2px solid #44bdd5; border-radius: 2.5rem; opacity: 0.75; box-sizing: content-box;}
+.main .visual .scroll .mousey .scroller {width: 0.3rem; height: 0.8rem; margin: 0.7rem auto 0; border-radius: 25%; background-color: #44bdd5; animation: scroll 2.2s cubic-bezier(.15,.41,.69,.94) infinite;}
+@keyframes scroll {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(1rem);
+        opacity: 0;
+    }
+}
+@keyframes circle_size {
+	0% {
+        width: 0; 
+        height: 0;
+    }
+	50% {
+		width: 75%; 
+        height: 75%;
+		margin: -37.5% 0 0 -37.5%;
+	}
+	70% {
+		width: 67%; 
+        height: 67%;
+		margin: -33.5% 0 0 -33.5%;
+	}
+	100% {
+		width: 70%; 
+        height: 70%;
+		margin: -35% 0 0 -35%;
+	}
+}
+@keyframes rotate360 {
+	0% {
+        transform: rotate(0);
+    }
+	100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes radius_ani {
+	0% {
+        border-radius: 100%;
+    }
+	10% {
+        border-radius: 100% 70% 100%;
+    }
+	20% {
+        border-radius: 91% 88% 75% 69%;
+    }
+	30% {
+        border-radius: 100% 100% 85%;
+    }
+	40% {
+        border-radius: 88% 100% 70%;
+    }
+	50% {
+        border-radius: 75% 100% 100%;
+    }
+	60% {
+        border-radius: 87% 78% 55% 84%;
+    }
+	70% {
+        border-radius: 79% 90% 80% 72%;
+    }
+	80% {
+        border-radius: 76% 92% 90% 77%;
+    }
+	90% {
+        border-radius: 83% 77% 99% 88%;
+    }
+	100% {
+        border-radius: 100%;
+    }
+}
+
+.main .intro {position: relative; overflow: hidden; padding-top: 11rem;}
+.main .intro .inner {background-color: #44bdd5; z-index: 1; position: relative; padding: 10rem 0;}
+.main .intro .txt {color: #ffffff; font-weight: 700; text-align: center; font-size: 3.2rem;}
+.main .intro .txt span {text-emphasis-style: dot; text-emphasis-position: over left;}
+.main .intro .btn {margin: 3.6rem auto 0; width: 15rem}
+.main .intro .back {position: absolute; color: #44bdd5; font-size: 10rem; top: 0; font-weight: 900;}
+.main .intro .back ul li {display: flex; align-items: center; gap: 10rem;}
+.main .intro .back ul li p span {-webkit-text-stroke: 1px #44bdd5; color: transparent}
+.main .intro .back ul li {transform: translate3d(0, 0, 0); animation-iteration-count: infinite; animation-timing-function: linear; animation-name: ticker; animation-duration: 5s; }
+.main .intro .back ul li:nth-child(even){animation-direction:reverse;}
+@keyframes ticker {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-20.7%, 0, 0);
+    }
+}
+
+.main .status {padding: 10rem 0;}
+.main .status .container {display: flex; align-items: stretch;}
+.main .status .container::after {display: none;}
+.main .status .txt-wrap {flex: none; width: 45%;}
+.main .status .txt-wrap .tit {font-weight: 700; color: #44bdd5; font-size: 2.4rem;}
+.main .status .txt-wrap .txt01 {font-size: 3.2rem; font-weight: 700; margin-top: 1rem;}
+.main .status .txt-wrap .txt02 {font-size: 2.8rem; margin-top: 0.5rem}
+.main .status .cont {flex: none; width: 55%; display: flex; align-items: stretch; border-left: 2px solid #404040; border-right: 2px solid #404040;}
+.main .status .cont .item {flex: 1 0; height: 100%; text-align: center; padding: 2.5rem 0;}
+.main .status .cont .item + .item {border-left: 2px solid #404040;}
+.main .status .cont .item i {margin: 0 auto;}
+.main .status .cont .item .value {font-size: 2rem; margin-top: 1rem;}
+.main .status .cont .item .value strong {font-weight: 700; color: #44bdd5; font-size: 3.6rem; display: inline-block; margin-right: 0.5rem;}
+.main .status .cont .item .txt {font-size: 1.8rem; margin-top: 1rem;}
+
+.main .showcase {background-color: #f6f6f6; padding: 10rem 0;}
+.main .showcase .container {display: flex; align-items: stretch;}
+.main .showcase .container::after {display: none;}
+.main .showcase .txt-wrap {flex: none; width: 45%;}
+.main .showcase .txt-wrap .tit {font-weight: 700; color: #44bdd5; font-size: 2.4rem;}
+.main .showcase .txt-wrap .txt01 {font-size: 3.2rem; font-weight: 700; margin-top: 1rem;}
+.main .showcase .txt-wrap .txt02 {font-size: 2.8rem; margin-top: 0.5rem}
+.main .showcase .txt-wrap .btn {margin-top: 3.6rem; width: 15rem}
+.main .showcase .cont {flex: none; width: 55%;}
+.main .showcase .cont ul {width: 100%;}
+.main .showcase .cont ul::after {display: block; clear: both; content: "";}
+.main .showcase .cont ul li {width: 60%; float: right;}
+.main .showcase .cont ul li + li {margin-top: 15rem;}
+.main .showcase .cont ul li:nth-child(even) {float: left;}
+.main .showcase .cont ul li a {display: block; width: 100%; position: relative;}
+.main .showcase .cont ul li a .thumb {width: 100%; height: 60rem; background: #44bdd5; position: relative;}
+.main .showcase .cont ul li a .thumb img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; object-fit: cover; filter: blur(0); transition: .3s ease-in-out;}
+.main .showcase .cont ul li a:hover .thumb img {filter: blur(5px); opacity: 0.2;}
+.main .showcase .cont ul li a .thumb::before {content: "VIEW"; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%) scale(0); z-index: 1; font-size: 4rem; color: #ffffff; font-weight: 900; transition: all 300ms 0ms cubic-bezier(0.6, -0.28, 0.735, 0.045);}
+.main .showcase .cont ul li a:hover .thumb::before {transition: all 300ms 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275); transform: translate(-50%, -50%) scale(1);}
+.main .showcase .cont ul li a .num {position: absolute; font-weight: 900; font-size: 8rem; top: 0; left: 0; transform: translateX(-100%) rotate(-90deg); margin-left: 2rem;}
+.main .showcase .cont ul li a .txt-wrap {margin-top: 1.5rem;}
+.main .showcase .cont ul li a .txt-wrap .name {font-size: 3rem; font-weight: 700;}
+.main .showcase .cont ul li a .txt-wrap .tag {color: #44bdd5; overflow: hidden; font-size: 2rem;}
+.main .showcase .cont ul li a .txt-wrap .tag span {float: left;}
+.main .showcase .cont ul li a .txt-wrap .tag span + span {margin-left: 1rem;}
+
+.main .customer {background: url('../img/main/bg_contant.png') no-repeat center bottom; background-size: cover; padding: 10rem 0; text-align: center; color: #ffffff; font-weight: 700;}
+.main .customer .tit {font-size: 2.4rem; text-shadow: 0px 0px 2px rgba(0,0,0,0.25);}
+.main .customer .txt {font-size: 4.8rem; margin-top: 1.5rem; text-shadow: 0px 0px 2px rgba(0,0,0,0.25);}
+.main .customer .btn {margin: 3.6rem auto 0; width: 15rem}

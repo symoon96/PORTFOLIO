@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<title>Default</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+
+	<!-- reset css -->
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+
+    <!-- dist/css -->
+    <link href="../dist/css/style.css" rel="stylesheet" type="text/css">
+
+    <!-- custom css -->
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/sub.css" rel="stylesheet" type="text/css">
+
+    <!-- jquery -->
+    <script src="../js/jquery-3.6.3.min.js"></script>
+
+    <!-- dist/js -->
+    <script src="../dist/js/script.js"></script>
+    
+    <!-- custom js -->
+    <script src="../js/common.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/sub.js"></script>
+</head>
+<body>
+    <!-- skip-nav -->
+    <div id="skip-nav">
+        <a href="#nav">메인메뉴 바로가기</a>
+        <a href="#content">본문내용 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <!-- loading -->
+    <div class="loading">
+        <img src="../img/common/logo_icon.png" alt="" style="display: none;">
+        <canvas id="loadingBar" width="90" height="90"></canvas>
+    </div>
+    <!--// loading -->
+
+    <!-- cursor -->
+    <!-- <div class="cursor"></div> -->
+    <!--// cursor -->
+
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+            <h1 class="logo"><a href="javascript:void(0);">pub.House</a></h1>
+
+            <button class="btn-ic btn-menu"><span>메뉴</span></button>
+
+            <!-- gnb -->
+            <div class="gnb">
+                <!-- 참고: https://codepen.io/lpato/details/rNxadEp, https://codyhouse.co/gem/css-rounded-animated-navigation, https://codepen.io/melnik909/details/JpJPYp -->
+                <ul>
+                    <li><a href="javascript:void(0);" title="Home">Home</a></li>
+                    <li><a href="javascript:void(0);" title="About">About</a></li>
+                    <li><a href="javascript:void(0);" title="Project">Project</a></li>
+                    <li><a href="javascript:void(0);" title="Contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 
+            1. 맨 상단: 화이트톤(배경 x)으로 아이콘과 로고 맞춤
+            2. 아래로 스크롤시 비주얼 영역 안에서는 흰색 배경에 컬러 로고, 컬러 메뉴
+            3. 아래로 스크롤시 비주얼 영역 외에서는 숨김
+            4. 위로 올릴시 보임
+
+            https://codepen.io/aaroniker/pen/VwjexVy
+        -->
+    </div>
+    <!-- // header -->
+
+    <!-- content -->
+    <div id="content" class="sub">
+        <div class="sub-visual">
+            <h2>Project</h2>
+        </div>
+        <div class="project">
+            <ul>
+                <li>
+                    <a href="javascript:void(0)">
+                        <div class="thumb"><img src="" alt=""></div>
+                        <div class="cont">
+                            <p class="title">AAAA</p>
+                            <div class="tag">
+                                <span>#html</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <div class="thumb"><img src="" alt=""></div>
+                        <div class="cont">
+                            <p class="title">AAAA</p>
+                            <div class="tag">
+                                <span>#html</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <div class="thumb"><img src="" alt=""></div>
+                        <div class="cont">
+                            <p class="title">AAAA</p>
+                            <div class="tag">
+                                <span>#html</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <div class="thumb"><img src="" alt=""></div>
+                        <div class="cont">
+                            <p class="title">AAAA</p>
+                            <div class="tag">
+                                <span>#html</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:void(0)">
+                        <div class="thumb"><img src="" alt=""></div>
+                        <div class="cont">
+                            <p class="title">AAAA</p>
+                            <div class="tag">
+                                <span>#html</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="paging">
+                <ul>
+                    <li class="front"><a href="javascript:void(0);">맨 앞으로</a></li>
+                    <li class="prev"><a href="javascript:void(0);">이전으로</a></li>
+                    <li><a href="javascript:void(0);">1</a></li>
+                    <li><a href="javascript:void(0);">2</a></li>
+                    <li><a href="javascript:void(0);">3</a></li>
+                    <li><a href="javascript:void(0);">4</a></li>
+                    <li><a href="javascript:void(0);">5</a></li>
+                    <li class="next"><a href="javascript:void(0);">다음으로</a></li>
+                    <li class="back"><a href="javascript:void(0);">맨 끝으로</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- // content -->
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="container">
+            <p class="copyright">Copyright&copy;2023.pub.House. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- // footer -->
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<title>Default</title>
+	<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,minimum-scale=1,maximum-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+
+	<!-- reset css -->
+    <link href="../css/reset.css" rel="stylesheet" type="text/css">
+    <link href="../css/fonts.css" rel="stylesheet" type="text/css">
+    <link href="../css/utility.css" rel="stylesheet" type="text/css">
+
+    <!-- dist/css -->
+    <!-- <link href="../dist/css/style.css" rel="stylesheet" type="text/css"> -->
+
+    <!-- custom css -->
+    <link href="../css/common.css" rel="stylesheet" type="text/css">
+    <link href="../css/components.css" rel="stylesheet" type="text/css">
+    <link href="../css/main.css" rel="stylesheet" type="text/css">
+    <link href="../css/sub.css" rel="stylesheet" type="text/css">
+
+    <!-- jquery -->
+    <script src="../js/jquery-3.6.3.min.js"></script>
+
+    <!-- dist/js -->
+    <!-- <script src="../dist/js/script.js"></script> -->
+    
+    <!-- custom js -->
+    <script src="../js/common.js"></script>
+    <!-- <script src="../js/main.js"></script>
+    <script src="../js/sub.js"></script> -->
+</head>
+<body>
+    <!-- skip-nav -->
+    <div id="skip-nav">
+        <a href="#nav">메인메뉴 바로가기</a>
+        <a href="#content">본문내용 바로가기</a>
+    </div>
+    <!-- //skip -->
+
+    <!-- loading -->
+    <div class="loading">
+        <img src="../img/common/logo_icon.png" alt="" style="display: none;">
+        <canvas id="loadingBar" width="90" height="90"></canvas>
+    </div>
+    <!--// loading -->
+
+    <!-- cursor -->
+    <div class="cursor"></div>
+    <!--// cursor -->
+
+    <!-- header -->
+    <div id="header">
+        <div class="container">
+            <h1 class="logo"><a href="javascript:void(0);">pub.House</a></h1>
+
+            <button class="btn-ic btn-menu"><span>메뉴</span></button>
+
+            <!-- gnb -->
+            <div class="gnb">
+                <!-- 참고: https://codepen.io/lpato/details/rNxadEp, https://codyhouse.co/gem/css-rounded-animated-navigation, https://codepen.io/melnik909/details/JpJPYp -->
+                <ul>
+                    <li><a href="javascript:void(0);" title="Home">Home</a></li>
+                    <li><a href="javascript:void(0);" title="About">About</a></li>
+                    <li><a href="javascript:void(0);" title="Project">Project</a></li>
+                    <li><a href="javascript:void(0);" title="Contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!--
+                라운드 모션으로 보여지기/숨기기 애니메이션
+            -->
+            <!-- // gnb -->
+        </div>
+    </div>
+    <!-- // header -->
+
+    <!-- content -->
+    <div id="content" class="main">
+        <div class="visual">
+            <div class="container">
+                <!-- 참고: https://codepen.io/hjnwhbyp/pen/NOrjpQ -->
+                <div class="bg">
+                    <div class="bg01"></div>
+                    <div class="bg02"></div>
+                    <div class="txt-wrap">
+                        <div class="inner">
+                            <p class="txt01">Designing Spaces, One Pixel at a Time</p>
+                            <p class="txt02">픽셀로 디자인하는 공간</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll">
+                <div class="mousey">
+                    <div class="scroller"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="intro">
+            <div class="inner">
+                <div class="container">
+                    <p class="txt">
+                        디자인에 <span>생동감</span>을, 개발에 <span>감각적인 센스</span>를 <br>
+                        퍼블리싱으로 이어드립니다.
+                    </p>
+                    <button class="btn md line-white">View More</button>
+    
+                    <!--
+                        포인트 컬러배경에 버튼에 애니메이션, 마우스 디자인 변경: 흰색컬러 사용
+                        참고: https://codepen.io/slgoetz/pen/wbpbjv
+                    -->
+                </div>
+            </div>
+
+            <div class="back">
+                <ul>
+                    <li>
+                        <p>
+                            <span>pub.</span>House
+                        </p>
+                        <p>
+                            <span>pub.</span>House
+                        </p>
+                        <p>
+                            <span>pub.</span>House
+                        </p>
+                        <p>
+                            <span>pub.</span>House
+                        </p>
+                        <p>
+                            <span>pub.</span>House
+                        </p>
+                    </li>
+                    <!-- <li>
+                        <p>
+                            pub.<span>House</span>
+                        </p>
+                        <p>
+                            pub.<span>House</span>
+                        </p>
+                        <p>
+                            pub.<span>House</span>
+                        </p>
+                        <p>
+                            pub.<span>House</span>
+                        </p>
+                        <p>
+                            pub.<span>House</span>
+                        </p>
+                    </li> -->
+                </ul>
+                
+            </div>
+        </div>
+        
+        <div class="status">
+            <div class="container">
+                <div class="txt-wrap">
+                    <p class="tit">Career</p>
+                    <p class="txt01">결과로 증명하는 실력</p>
+                    <p class="txt02">
+                        커리어는 거짓말 하지 않습니다. <br>
+                        직접 확인시켜 드리겠습니다.
+                    </p>
+                </div>
+                <div class="cont">
+                    <div class="item">
+                        <i class="ic-portfolio"></i>
+                        <p class="value"><strong>71</strong>개</p>
+                        <p class="txt">
+                            확실한 결과물<br>
+                            만족을 바탕으로 쌓인 포트폴리오
+                        </p>
+                    </div>
+                    <div class="item">
+                        <i class="ic-history"></i>
+                        <p class="value"><strong>5</strong>년</p>
+                        <p class="txt">
+                            지나온 수년의 경력으로 보는 <br>
+                            수많은 신뢰의 업적
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="showcase">
+            <div class="container">
+                <div class="txt-wrap">
+                    <p class="tit">Work</p>
+                    <p class="txt01">
+                        감탄을 만들어 드립니다.
+                    </p>
+                    <p class="txt02">
+                        높은 퀄리티, 높은 만족감 <br>
+                        퍼블리셔는 손끝으로 보여주는 직업입니다.
+                    </p>
+                    <button class="btn md fill-blue">View More</button>
+                </div>
+                <div class="cont">
+                    <!--
+                        밸런스핏은 로딩 넣는게 어려우면 중간으로
+
+                        balansfit(로딩추가 고려)
+                        LG이샵
+                        AI스마트하우징
+                        스마트분전함
+                        lottecastle
+                    -->
+                    <ul>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="thumb">
+                                    <img src="../img/thumb/thumb01.png" alt="">
+                                </div>
+                                <p class="num">01</p>
+                                <div class="txt-wrap">
+                                    <p class="name">AAA</p>
+                                    <p class="tag"><span>#html</span><span>#반응형</span><span>#Figma</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="thumb">
+                                    <img src="../img/thumb/thumb02.png" alt="">
+                                </div>
+                                <p class="num">02</p>
+                                <div class="txt-wrap">
+                                    <p class="name">AAA</p>
+                                    <p class="tag"><span>#html</span><span>#반응형</span><span>#Figma</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="thumb">
+                                    <img src="../img/thumb/thumb03.png" alt="">
+                                </div>
+                                <p class="num">03</p>
+                                <div class="txt-wrap">
+                                    <p class="name">AAA</p>
+                                    <p class="tag"><span>#html</span><span>#반응형</span><span>#Figma</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="thumb">
+                                    <img src="../img/thumb/thumb04.png" alt="">
+                                </div>
+                                <p class="num">04</p>
+                                <div class="txt-wrap">
+                                    <p class="name">AAA</p>
+                                    <p class="tag"><span>#html</span><span>#반응형</span><span>#Figma</span></p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="thumb">
+                                    <img src="../img/thumb/thumb05.png" alt="">
+                                </div>
+                                <p class="num">05</p>
+                                <div class="txt-wrap">
+                                    <p class="name">AAA</p>
+                                    <p class="tag"><span>#html</span><span>#반응형</span><span>#Figma</span></p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!--
+                    슬라이드 active 상태의 슬라이드에 애니메이션 화려하게
+                    더보기는 아이콘으로
+                -->
+            </div>
+        </div>
+
+        <div class="customer">
+            <div class="container">
+                <p class="tit">Contact</p>
+                <p class="txt">궁금하신 내용은 문의 주시면 <br>빠르게 답변 드리겠습니다.</p>
+                <button class="btn md fill-blue">View More</button>
+                <!-- 배경 포인트 컬러로 -->
+            </div>
+        </div>
+    </div>
+    <!-- // content -->
+
+    <!-- footer -->
+    <div id="footer">
+        <div class="container">
+            <p class="copyright">Copyright&copy;2023.pub.House. All rights reserved.</p>
+        </div>
+    </div>
+    <!-- // footer -->
+</body>
+</html>

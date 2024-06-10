@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+/*-------------------------------------------------------------------
+    파일정의 : 컨텐츠 스타일
+-------------------------------------------------------------------*/
+
+/*-------------------------------------------------------------------
+    @공통
+-------------------------------------------------------------------*/
+.sub{}
+
+/* 서브 비쥬얼 */
+.sub-visual {height: 60rem; display: flex; align-items: center; justify-content: center; padding-top: 8.5rem;}
+.sub-visual h2 {text-align: center; font-weight: 900; font-size: 8rem; letter-spacing: 0;}
+
+.sub-visual.bg01{}
+
+.sub-visual .tit-visual{}
+
+.sub-visual .txt-visual{}
+
+/* location */
+.loc{  }
+.loc ul{}
+.loc ul li{}
+.loc ul li + li{}
+.loc ul li a{}
+.loc ul li:first-of-type a{}
+.loc ul li:last-of-type a{}
+
+/*-------------------------------------------------------------------
+    @메뉴명
+-------------------------------------------------------------------*/
+/* Project > list */
+.project {padding-left:2.5rem; padding-right: 2.5rem;}
+.project > ul {display: flex; flex-wrap: wrap; gap: 5rem 3rem; align-items: stretch;}
+.project > ul > li {flex: none; width: calc(33.3334% - 2rem);}
+.project > ul > li > a > .thumb {position: relative; width: 100%; height: 0; padding-top: 56.6667%; background-color: #c4c4c4;}
+.project > ul > li > a > .cont {margin-top: 1.5rem;}
+.project > ul > li > a > .cont > .title {font-size: 3rem; font-weight: 700;}
+.project > ul > li > a > .cont > .tag {overflow: hidden;}
+.project > ul > li > a > .cont > .tag > span {float: left; font-size: 2rem; font-weight: 500;}
