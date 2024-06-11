@@ -102,21 +102,18 @@
 	</style>
 
 	<script>
+let treeHtml = "";
+			treeHtml += '<ul>';
 		$(document).ready(function(){
 			let viewer = $('#wrap').attr('class');
 
 			getData();
 
-			// appendArea($('#tree'), getData());
-
-			appendArea2($('#tree'), getData());
+			appendArea($('#tree'), getData());
 
 			viewType(viewer);
 			linkInit();
 			typeAct();
-
-			
-
 			targetSet('iFrame');
 		});
 
@@ -212,12 +209,6 @@
 							menuName: "c.회원가입",
 							url : '',
 							children: [
-								{
-									depthNo: 3,
-									menuName: "c.회원가입",
-									url : '',
-									children: []
-								},
 								{
 									depthNo: 3,
 									menuName: "C[01].약관동의",
@@ -530,141 +521,68 @@
 		}
 
 		function appendArea($this, dataList){
-			let treeHtml = "";
-				treeHtml += `<ul>`;
+			for(let i = 0; i < dataList.length; i++){
+						let thisDb1 = dataList[i]
+						let thisChild1 = thisDb1.children
 
-			for(var i = 0; i < dataList.length; i++){
-				var data = dataList[i];
-				var depth = data.depthNo;
-				var children = data.children;
+						listHtml(thisDb1)
 
-				if(children.length > 0){
-					treeHtml += `<li class="step`
-					treeHtml += data.depthNo
-					treeHtml += `"><a href="`
-					treeHtml += data.url
-					treeHtml += `">`
-					treeHtml += data.menuName
-					treeHtml += `</a>`
+						if(thisChild1.length > 0){
+									treeHtml += '<ul>'
 
-					if(children.length > 0){
-						treeHtml += `<ul>`
+									for(let i = 0; i < thisChild1.length; i++){
+												let thisDb2 = thisChild1[i]
+												let thisChild2 = thisDb2.children
 
-						for(var k = 0; k < children.length; k++){
-							var data2 = children[k];
-							var depth2 = data2.depthNo;
-							var children2 = data2.children;
+												listHtml(thisDb2)
 
-							treeHtml += `<li class="step`
-							treeHtml += data2.depthNo
-							treeHtml += `"><a href="`
-							treeHtml += data2.url
-							treeHtml += `">`
-							treeHtml += data2.menuName
-							treeHtml += `</a>`
-							
-							if(children2.length > 0){
-								treeHtml += `<ul>`
+												if(thisChild2.length > 0){
+															treeHtml += '<ul>'
 
-								for(var j = 0; j < children2.length; j++){
-									var data3 = children2[j];
-									var depth3 = data3.depthNo;
-									var children3 = data3.children;
+															for(let i = 0; i < thisChild2.length; i++){
+																		let thisDb3 = thischild2[i]
+																		let thisChild3 = thisDb3.children
 
-									treeHtml += `<li class="step`
-									treeHtml += data3.depthNo
-									treeHtml += `"><a href="`
-									treeHtml += data3.url
-									treeHtml += `">`
-									treeHtml += data3.menuName
-									treeHtml += `</a>`
+																		listHtml(thisDb3)
 
-									if(children3.length > 0){
-										treeHtml += `<ul>`
+																		if(thisChild3.length > 0){
+																					for(let i = 0; i < thisChild3.length; i++){
+																								let thisDb4 = thisChild3[i]
+																								let thisChild4 = thisDb3.children
 
-										for(var l = 0; l < children3.length; l++){
-											var data4 = children3[l];
-											var depth4 = data4.depthNo;
+																								listHtml(thisDb4)
+																								treeHtml += '</li>'
+																					}
+																		}
 
-											treeHtml += `<li class="step`
-											treeHtml += data4.depthNo
-											treeHtml += `"><a href="`
-											treeHtml += data4.url
-											treeHtml += `">`
-											treeHtml += data4.menuName
-											treeHtml += `</a>`
-											
-											treeHtml += `</li>`
-										}
-
-										treeHtml += `</ul>`
+																		treeHtml += '</li>'
+															}
+															treeHtml += '</ul>'
+												}
+												treeHtml += '</li>'
 									}
-									treeHtml += `</li>`
-								}
-
-								treeHtml += `</ul>`
-							}
-							treeHtml += `</li>`
+									treeHtml += '</ul>'
 						}
-
-						treeHtml += `</ul>`
-					}
-
-					treeHtml += `</li>`;
-				}
+						treeHtml += '</li>'
 			}
+    treeHtml += '</ul>'
 			
-			treeHtml += `</ul>`
-
 			$this.append(treeHtml);
 		}
 
-		function appendArea2($this, dataList){
-			if(dataList == null){
-				return
-			}
+		function listHtml(target){
+			let thisTarget = target;
+			let thisDbNum = thisTarget.depthNo;
+			let thisDbUrl = thisTarget.url;
+			let thisDbName = thisTarget.menuName
 
-			treeHtml += `<ul>`
-
-			for(var i = 0; i < dataList.length; i++){
-				treeHtml += appendDepth1(dataList[i]);
-			}
-
-			treeHtml += `</ul>`
-
-			$this.append(treeHtml);
-		}
-
-		function appendDepth1(data){
-			treeHtml += `<li class="step`
-			treeHtml += data.depthNo
-			treeHtml += `"><a href="`
-			treeHtml += data.url
-			treeHtml += `">`
-			treeHtml += data.menuName
-			treeHtml += `</a>`
-
-			for(var i = 0; i < dataList.length; i++){
-				appendDepth2(data)
-			}
-			
-			treeHtml += `</li>`;
+			treeHtml += '<li class="step' + thisDbNum + '">'
+			treeHtml += '<a href="' + thisDbUrl + '">'
+			treeHtml += thisDbName
+			treeHtml += '</a>'
 
 			return treeHtml
 		}
-
-		function appendDepth2(){
-			
-		}
-
-		function appendDepth3(){
-			
-		}
-
-		function appendDepth4(){
-			
-		}
-
 	</script>
 </body>
 </html>
